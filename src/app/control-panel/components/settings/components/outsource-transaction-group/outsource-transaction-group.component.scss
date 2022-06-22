@@ -1,0 +1,50 @@
+.card {
+    border: 1px solid gray;
+    padding: 20px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 8px;
+    margin: 10px;
+}
+
+.actions {
+    border-right: 1px solid gray;
+
+    &>button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.3rem;
+        padding-right: 20px;
+        cursor: pointer;
+
+        &.delete {
+            color: red;
+        }
+
+        &.edit {
+            color: rgb(34, 139, 243);
+        }
+    }
+}
+
+i {
+    padding-left: 10px;
+}
+
+.table-actions {
+    background-color: rgba(169, 217, 240, 0.548);
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    &>button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        padding-right: 20px;
+        cursor: pointer;
+
+        &>i {
+            color: rgb(34, 139, 243);
+            padding-left: 10px;
+        }
+    }
+}

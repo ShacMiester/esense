@@ -1,0 +1,12 @@
+<div class="table-actions">
+    <button (click)="openDialog('add')"><i class="fa fa-plus"></i>إضافة</button>
+    <input type="text" placeholder="ابحث عن الاسم" [(ngModel)]="searchValue" (ngModelChange)="changed($event)">
+</div>
+<div class="card" style="display:flex; justify-content: space-between;"
+    *ngFor="let item of outSourceTransactionGroupItems">
+    {{item.name}}
+    <div class="actions" style="display: flex;">
+        <button class="edit" (click)="updateRecord(item)"><i class="fa fa-pencil"></i>تعديل</button>
+        <button class="delete" (click)="deleteRecord(item.id)"><i class="fa fa-trash"></i>حذف</button>
+    </div>
+</div>

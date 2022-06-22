@@ -1,0 +1,31 @@
+<div class="dialog-header" mat-dialog-title>
+    <h2>{{title}}</h2>
+</div>
+<div class="form-wrapper" mat-dialog-content>
+    <form style="display: flex; flex-direction: column; height: 100%; padding-top: 20px; padding-bottom: 20px;"
+        (submit)="submitForm()" [formGroup]="outSourceForm">
+
+        <div class="field-wrapper">
+            <label for="name">
+                الاسم
+                <span class="required-asterisk" *ngIf="outSourceForm.controls['name'].hasError('required')">
+                    *</span>
+            </label>
+            <input id="name" type="text" [formControlName]="'name'" placeholder="أدخل الاسم أو الرقم">
+        </div>
+
+        <div class="field-wrapper">
+            <label for="details">
+                التفاصيل
+                <span class="required-asterisk" *ngIf="outSourceForm.controls['details'].hasError('required')">
+                    *</span>
+            </label>
+            <input id="details" type="text" [formControlName]="'details'" placeholder="التفاصيل">
+        </div>
+    </form>
+</div>
+<div class="action-container" mat-dialog-actions>
+    <button class="save" cdkFocusInitial [mat-dialog-close]="{record:outSourceForm.value,type:'edit'}"
+        [disabled]="!outSourceForm.valid">حفظ</button>
+    <button class="clear" [mat-dialog-close]="false">الغاء</button>
+</div>

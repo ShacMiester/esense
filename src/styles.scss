@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    direction: rtl;
+}
+
+
+input {
+    height: 35px;
+    border: none;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 8px;
+    padding: 0 10px;
+
+    &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid dodgerblue;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+    &:active {
+        transition: all .1s;
+        transform: translateY(1px);
+    }
+}

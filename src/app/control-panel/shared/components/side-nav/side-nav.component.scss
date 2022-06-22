@@ -1,0 +1,36 @@
+$header-container-height: 50px;
+$navbar-container-height: 35px;
+$navbar-link-color: black;
+
+.side-nav {
+    &__main-container {
+        background-color: rgba(245, 247, 249, 1.00);
+        height: calc(100vh - $header-container-height - $navbar-container-height - 25px);
+        width: 300px;
+    }
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    padding-right: 0px;
+    margin-right: 0;
+
+    &>li {
+        padding: 10px 10px 10px;
+
+        &.active {
+            border-right: 3px solid rgb(53, 53, 189);
+            padding-right: 20px;
+            transition: all .4s;
+            background-color: rgba(169, 217, 240, 0.548);
+        }
+
+        &>a {
+            color: $navbar-link-color;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+    }
+}

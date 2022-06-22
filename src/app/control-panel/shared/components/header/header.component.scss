@@ -1,0 +1,28 @@
+$header-background-color: #323639;
+$header-text-color: #ffffff;
+$header-container-height: 50px;
+$header-active-link-background-color:#202124;
+
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $header-background-color;
+    height: $header-container-height;
+    align-items: center;
+    padding: 5px 10px;
+
+    a {
+        color: $header-text-color;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .active-header-link {
+        background-color: $header-active-link-background-color;
+        transition: all .4s;
+        border-radius: 10px;
+    }
+}

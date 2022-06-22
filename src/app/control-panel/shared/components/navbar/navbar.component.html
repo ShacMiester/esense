@@ -1,0 +1,3 @@
+<div class="main-container" *ngIf="items.length">
+    <div class="links" *ngFor="let i of items"><a [routerLinkActive]="'active-navbar-link'" [routerLink]="[i?.link]">{{i.name}}</a></div>
+</div>

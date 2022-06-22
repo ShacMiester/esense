@@ -1,0 +1,10 @@
+<div class="main-container">
+    <div class="links">
+        <a *ngFor="let i of headerItems;" [routerLink]="[i.link]"
+            [routerLinkActive]="'active-header-link'">{{i.name}}</a>
+    </div>
+    <div class="user-info" style="display: flex; align-items: center;">
+        <div style="color: white;">شريف محمد</div>
+        <img src="../../../../assets/Emblem-person-blue.svg.png" alt="" width="40px">
+    </div>
+</div>

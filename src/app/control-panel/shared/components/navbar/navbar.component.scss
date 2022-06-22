@@ -1,0 +1,30 @@
+$navbar-background-color: #202124;
+$navbar-text-color: #ffffff;
+$navbar-container-height: 35px;
+$navbar-active-link-background-color: linear-gradient(180deg, rgba(32, 33, 36, 0.3) 63%, rgba(252, 252, 252, .15) 100%);
+$navbar-active-border-left-right: 1px solid rgba(252, 252, 252, .15);
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $navbar-background-color;
+    height: $navbar-container-height;
+    align-items: center;
+    padding: 5px 0px;
+
+    a {
+        color: $navbar-text-color;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        height: 100%;
+    }
+
+    .active-navbar-link {
+        background: $navbar-active-link-background-color;
+        border-bottom: 5px solid #ffffff;
+        border-left: $navbar-active-border-left-right;
+        border-right: $navbar-active-border-left-right;
+        transition: all .1s;
+    }
+}
